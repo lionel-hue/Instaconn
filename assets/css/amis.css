@@ -4,7 +4,7 @@ body {
   background: #f0f2f5;
 }
 
-.container {
+.app-container {
   display: flex;
   height: calc(100vh - 56px);
   margin-left:0;

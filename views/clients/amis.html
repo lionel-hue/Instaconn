@@ -1,19 +1,67 @@
-<div class="container">
-    <aside class="sidebar">
-        <h2>Friends</h2>
-        <ul>
-        <li class="active"><span class="icon friends"></span>Home</li>
-        <li><span class="icon request"></span>Friend Requests</li>
-        <li><span class="icon suggestion"></span>Suggestions</li>
-        <li><span class="icon all"></span>All friends</li>
-        <li><span class="icon birthday"></span>Birthdays</li>
-        <li><span class="icon custom"></span>Custom Lists</li>
-        </ul>
-    </aside>
-    <div class="main-content-amis">
-        <div class="empty-state">
-            <div class="empty-icon"></div>
-            <h3>When you have friend requests or suggestions, you'll see them here.</h3>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<div class="container-fluid">
+  <div class="row min-vh-100">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar p-3">
+      <h2 class="h4 fw-bold mb-4">Friends</h2>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <button class="btn btn-outline-primary nav-link active" data-section="home" onclick="showSection('home')">
+            <i class="bi bi-house-door-fill me-2"></i> Home
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-outline-primary nav-link" data-section="requests" onclick="showSection('requests')">
+            <i class="bi bi-person-plus-fill me-2"></i> Friend Requests
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link d-flex align-items-center" onclick="showSection(event, 'suggestions')">
+            <i class="bi bi-person-lines-fill me-2"></i> Suggestions
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link d-flex align-items-center" onclick="showSection(event, 'all')">
+            <i class="bi bi-people-fill me-2"></i> All Friends
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link d-flex align-items-center" onclick="showSection(event, 'birthdays')">
+            <i class="bi bi-gift-fill me-2"></i> Birthdays
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link d-flex align-items-center" onclick="showSection(event, 'custom')">
+            <i class="bi bi-list-ul me-2"></i> Custom Lists
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 d-flex align-items-center justify-content-center">
+      <div class="text-center">
+        <div class="mb-4">
+          <i class="bi bi-people-fill display-1 text-secondary"></i>
         </div>
-    </div>
+        <h3 class="fw-bold text-secondary">
+          When you have friend requests or suggestions, you'll see them here.
+        </h3>
+      </div>
+    </main>
+  </div>
 </div>
+
+<!-- Bootstrap JS (optionnel, utile si composants dynamiques) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Sidebar + Main content déjà prêt (comme plus haut) -->
+
+<!-- ... ton code HTML ... -->
+
+<script src="/assets/js/controllers/amis/amis.js"></script> <!-- chemin relatif vers ton fichier JS -->
+</body>
+</html>
